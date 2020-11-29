@@ -11,7 +11,7 @@
     <h2>{{ resultQuest }}</h2>
     <!-- 敵の手 -->
     <div>
-      <img :src="enemyHandImage" width="500">
+      <img :src="enemyHandImage" width="300">
     </div>
 
     <!-- 自分の手 -->
@@ -49,7 +49,6 @@
             this.enemyHandImage = 'img/par.png';
           }
           
-
           // 自分の手と敵の手を比較する
           console.log('敵の手:'+this.enemyHand);
           console.log('自分の手:'+myHand);
@@ -68,13 +67,11 @@
             console.log('勝ち!');
             this.result = '勝ち';
             this.resultQuest = '';
-          }
-          if(this.enemyHand === 'chiki' && myHand === 'goo'){
+          }else if(this.enemyHand === 'choki' && myHand === 'goo'){
             console.log('勝ち!');
             this.result = '勝ち';
             this.resultQuest = '';
-          }
-          if(this.enemyHand === 'par' && myHand === 'choki'){
+          }else if(this.enemyHand === 'par' && myHand === 'choki'){
             console.log('勝ち!');
             this.result = '勝ち';
             this.resultQuest = '';
@@ -85,13 +82,11 @@
             console.log('負け!');
             this.result = '負け';
             this.resultQuest;
-          }
-          if(this.enemyHand === 'chiki' && myHand === 'par'){
+          }else if(this.enemyHand === 'choki' && myHand === 'par'){
             console.log('負け!');
             this.result = '負け';
             this.resultQuest;
-          }
-          if(this.enemyHand === 'par' && myHand === 'goo'){
+          }else if(this.enemyHand === 'par' && myHand === 'goo'){
             console.log('負け!');
             this.result = '負け';
             this.resultQuest;
